@@ -29,7 +29,7 @@ const switchPlayer = () => {
 btnRoll.addEventListener('click', () => {
     if (gameOver){
         diceImg.style.display = 'block'
-        
+
         const randomNumber = Math.floor(Math.random() * 6) + 1
         diceImg.src = `./dice-${randomNumber}.png`
         
@@ -50,7 +50,7 @@ btnHold.addEventListener('click', () => {
         score[activePlayer] += currentScore
         document.getElementById(`score--${activePlayer}`).textContent = score[activePlayer]
         
-        if (score[activePlayer] >= 20) {
+        if (score[activePlayer] >= 10) {
             document.querySelector(`.player--${activePlayer}`).classList.add('player--winner')
             gameOver = false
         }else {
